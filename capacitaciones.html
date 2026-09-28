@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capacitaciones SG-SST | GLORCAS</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary-green: #2ecc71;
+      --dark-green: #27ae60;
+      --light-green-bg: #e8f5ee;
+    }
+    
+    .bg-light-green { background-color: var(--light-green-bg); }
+    .text-primary-green { color: var(--primary-green); }
+    .text-dark-green { color: var(--dark-green); }
+    .btn-green { background-color: var(--primary-green); color: white; transition: 0.3s; }
+    .btn-green:hover { background-color: var(--dark-green); color: white; }
+    
+    .hover-card { transition: transform 0.3s ease, box-shadow 0.3s ease; border: none; }
+    .hover-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2) !important; }
+    
+    .icon-box {
+      width: 70px; height: 70px;
+      background-color: var(--light-green-bg);
+      color: var(--dark-green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; margin: 0 auto 15px auto;
+    }
+    button { 
+        background-color: var(--dark-green);
+        border-radius: 20px;
+         display: flex; 
+         align-items: left;
+         padding: 5px;
+         margin-inline: 15px;
+         width: 20%;
+          justify-content: center;
+        align-items: center;
+         text-decoration: none;
+         box-shadow:0 2px;
+
+
+      }
+      .boton-inicio{
+        color:white;
+        text-decoration: none;
+        
+        
+      }
+    
+  </style>
+</head>
+<body class="bg-light">
+  <header class="bg-dark text-white text-center py-5" style="background: linear-gradient(rgba(26, 28, 35, 0.9), rgba(39, 174, 96, 0.8)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80') center/cover;">
+<button>
+  <a href="index.html" class="boton-inicio">vovler al inicio</a>
+</button>        
+    <div class="container py-5">
+      <span class="badge bg-success mb-3 px-3 py-2 fs-6 rounded-pill">Formación Especializada</span>
+      <h1 class="display-4 fw-bold mb-3">Plan de Capacitación SG-SST</h1>
+      <p class="lead w-75 mx-auto mb-4">Cumplimos con la normativa legal (Decreto 1072) y construimos una verdadera cultura preventiva en tu empresa a través de metodologías teórico-prácticas.</p>
+      <a href="#modulos" class="btn btn-green btn-lg px-4 rounded-pill">Ver Módulos de Formación <i class="fa-solid fa-arrow-down ms-2"></i></a>
+    </div>
+  </header>
+
+  <section class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="text-dark-green fw-bold mb-3">Más que un requisito legal, protegemos vidas.</h2>
+        <p class="text-muted">El Programa de Capacitación en Seguridad y Salud en el Trabajo es obligatorio para todas las empresas. Nuestro objetivo es entrenar a tus colaboradores para identificar peligros, prevenir accidentes y saber cómo actuar ante emergencias.</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3"><i class="fa-solid fa-check-circle text-primary-green me-2"></i> <strong>Cumplimiento Normativo:</strong> Evita sanciones de MinTrabajo.</li>
+          <li class="mb-3"><i class="fa-solid fa-check-circle text-primary-green me-2"></i> <strong>Reducción de Accidentalidad:</strong> Personal consciente y preparado.</li>
+          <li class="mb-3"><i class="fa-solid fa-check-circle text-primary-green me-2"></i> <strong>Certificación Incluida:</strong> Entrega de constancias de asistencia y evaluación.</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="imagenes/presentacion.jpg" alt="Capacitación SG-SST" class="img-fluid rounded shadow-lg border-bottom border-5 border-success">
+      </div>
+    </div>
+  </section>
+
+  <section id="modulos" class="bg-light-green py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-dark-green">Nuestro Portafolio Temático</h2>
+        <p class="text-muted">Diseñamos charlas de 1 a 4 horas según la necesidad y riesgo de tu empresa.</p>
+      </div>
+
+      <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm hover-card text-center p-3">
+            <div class="card-body">
+              <div class="icon-box"><i class="fa-solid fa-users-gear"></i></div>
+              <h4 class="card-title text-dark-green fw-bold">Comités de Ley</h4>
+              <p class="card-text text-muted small">Formación exclusiva para representantes y vigías.</p>
+              <ul class="list-unstyled text-start small mt-3 border-top pt-3">
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Funciones del COPASST / Vigía</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Comité de Convivencia Laboral</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Investigación de Accidentes de Trabajo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm hover-card text-center p-3">
+            <div class="card-body">
+              <div class="icon-box"><i class="fa-solid fa-truck-medical"></i></div>
+              <h4 class="card-title text-dark-green fw-bold">Brigadas y APH</h4>
+              <p class="card-text text-muted small">Entrenamiento práctico para atención de crisis liderado por Primer Respondiente.</p>
+              <ul class="list-unstyled text-start small mt-3 border-top pt-3">
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Primeros Auxilios Básicos</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Uso y manejo de extintores</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Evacuación y rescate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm hover-card text-center p-3">
+            <div class="card-body">
+              <div class="icon-box"><i class="fa-solid fa-person-falling-burst"></i></div>
+              <h4 class="card-title text-dark-green fw-bold">Tareas de Alto Riesgo</h4>
+              <p class="card-text text-muted small">Supervisión e instrucción con Coordinador certificado.</p>
+              <ul class="list-unstyled text-start small mt-3 border-top pt-3">
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Trabajo Seguro en Alturas</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Espacios Confinados</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Riesgo Eléctrico (LOTO)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm hover-card text-center p-3">
+            <div class="card-body">
+              <div class="icon-box"><i class="fa-solid fa-child-reaching"></i></div>
+              <h4 class="card-title text-dark-green fw-bold">Higiene y Ergonomía</h4>
+              <p class="card-text text-muted small">Prevención de enfermedades laborales a largo plazo.</p>
+              <ul class="list-unstyled text-start small mt-3 border-top pt-3">
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Higiene Postural y Pausas Activas</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Manejo manual de cargas</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Prevención de riesgo visual/auditivo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm hover-card text-center p-3">
+            <div class="card-body">
+              <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+              <h4 class="card-title text-dark-green fw-bold">Riesgo Psicosocial</h4>
+              <p class="card-text text-muted small">Cuidamos la salud mental y el clima laboral de tu equipo.</p>
+              <ul class="list-unstyled text-start small mt-3 border-top pt-3">
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Manejo del estrés laboral</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Prevención del acoso (Ley 1010)</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Liderazgo y comunicación asertiva</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm hover-card text-center p-3">
+            <div class="card-body">
+              <div class="icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <h4 class="card-title text-dark-green fw-bold">Inducción y Reinducción</h4>
+              <p class="card-text text-muted small">El primer paso para todo colaborador nuevo o antiguo.</p>
+              <ul class="list-unstyled text-start small mt-3 border-top pt-3">
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Políticas de SST de la empresa</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Identificación de peligros (IPVR)</li>
+                <li><i class="fa-solid fa-caret-right text-success me-1"></i> Reporte de condiciones inseguras</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 text-center bg-white border-top">
+    <div class="container py-4">
+      <h3 class="fw-bold mb-3">¿Necesitas capacitar a tu personal?</h3>
+      <p class="text-muted mb-4">Cuéntame de qué sector es tu empresa y programamos el plan de formación anual a tu medida.</p>
+      <a href="https://api.whatsapp.com/send?phone=573226167819&text=Hola%20Gloria,%20deseo%20cotizar%20unas%20capacitaciones%20de%20SG-SST%20para%20mi%20empresa." target="_blank" class="btn btn-green btn-lg px-5 rounded-pill shadow-sm">
+        <i class="fa-brands fa-whatsapp me-2"></i> Agendar Capacitación
+      </a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

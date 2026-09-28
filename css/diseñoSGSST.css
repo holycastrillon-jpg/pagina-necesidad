@@ -1,0 +1,363 @@
+
+:root {
+    --verde-primario: #2ecc71;
+    --verde-oscuro: #27ae60;
+    --fondo-verde-claro: #c9d6d0;
+    --color-whatsapp: #0dea5e;
+    --color-fondo: #f8f9fa; 
+    --texto-principal: #333333;
+    --texto-secundario: #666666;
+    --fondo-cristal: rgba(255, 255, 255, 0.65);
+    --borde-cristal: rgba(255, 255, 255, 0.4);
+    --sombra-cristal: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+    --fondo-interruptor: #e0e5ec;
+    --sombra-clara-interruptor: #ffffff;
+    --sombra-oscura-interruptor: #a3b1c6;
+    --icono-interruptor: #030303;
+}
+
+body:has(#interruptor-tema:checked) {
+    --color-fondo: #121418;
+    --texto-principal: #f1f2f6;
+    --texto-secundario: #aab2bd;
+    --fondo-verde-claro: #1b2621;
+    --fondo-cristal: rgba(26, 28, 35, 0.6);
+    --borde-cristal: rgba(255, 255, 255, 0.08);
+    --sombra-cristal: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --fondo-interruptor: #1a1c23;
+    --sombra-clara-interruptor: #242731;
+    --sombra-oscura-interruptor: #0a0b0d;
+    --icono-interruptor: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--texto-principal);
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.fondo-decorativo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.fondo-decorativo::before,
+.fondo-decorativo::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.15; 
+    transition: all 0.5s ease;
+}
+
+.fondo-decorativo::before {
+    width: 400px;
+    height: 400px;
+    background: var(--verde-oscuro);
+    top: -100px;
+    left: -100px;
+}
+
+.fondo-decorativo::after {
+    width: 300px;
+    height: 300px;
+    background: var(--verde-primario);
+    bottom: 10%;
+    right: -50px;
+}
+
+.cabecera-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--fondo-cristal);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borde-cristal);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.4s;
+    box-shadow: var(--sombra-cristal);
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.texto-logo {
+    font-size: 1.5rem;
+    color: var(--verde-oscuro);
+    font-weight: bold;
+}
+   button { 
+        background-color: var(--dark-green);
+        border-radius: 20px;
+         display: flex; 
+         align-items: left;
+         padding: 5px;
+         margin-inline: 15px;
+         width: 20%;
+          justify-content: center;
+        align-items: center;
+         text-decoration: none;
+         box-shadow:0 2px;
+
+
+      }
+      .boton-inicio{
+        color:white;
+        text-decoration: none;
+        
+        
+      }
+.control-modo-oscuro { display: none; }
+
+.boton-modo-oscuro {
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: var(--fondo-interruptor);
+    cursor: pointer;
+    position: relative;
+    box-shadow: 2px 2px 5px var(--sombra-oscura-interruptor), -2px -2px 5px var(--sombra-clara-interruptor);
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    transition: 0.4s;
+}
+
+.cara-boton {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--fondo-interruptor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 3px;
+    box-shadow: inset 1px 1px 2px var(--sombra-clara-interruptor), inset -1px -1px 2px var(--sombra-oscura-interruptor);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), background-color 0.4s;
+}
+
+#interruptor-tema:checked ~ * .cara-boton { transform: translateX(24px); }
+
+.luna-icono {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: inset 2px -2px 0 0 var(--icono-interruptor);
+    transform: translate(1px, -1px);
+    transition: 0.4s;
+}
+
+#interruptor-tema:checked ~ * .luna-icono {
+    box-shadow: inset 10px -10px 0 0 var(--icono-interruptor);
+    transform: translate(0, 0);
+}
+
+/* =========================================
+   7. BOTONES LIQUID GLASS
+========================================= */
+.boton-cristal-liquido {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--texto-principal);
+    background: var(--fondo-verde-claro);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--borde-cristal);
+    border-radius: 30px;
+    box-shadow: var(--sombra-cristal);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.boton-cristal-liquido::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-20deg);
+    transition: all 0.4s ease;
+}
+
+.boton-cristal-liquido:hover {
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+    border-color: var(--verde-primario);
+    color: var(--verde-primario);
+}
+
+.boton-cristal-liquido:hover::before {
+    left: 150%;
+    transition: all 0.6s ease;
+}
+
+/* =========================================
+   8. TARJETAS DE SERVICIOS
+========================================= */
+.tarjeta-cristal {
+    background: var(--fondo-cristal);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--borde-cristal);
+    border-radius: 16px;
+    box-shadow: var(--sombra-cristal);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta-cristal:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde-primario);
+}
+
+.seccion-servicios { padding: 60px 20px; }
+.encabezado-seccion { text-align: center; margin-bottom: 40px; }
+.encabezado-seccion h2 { color: var(--verde-oscuro); font-size: 2rem; }
+
+.cuadricula-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenido-tarjeta { padding: 20px; display: flex; flex-direction: column; gap: 15px; }
+.contenido-tarjeta h3 { color: var(--texto-principal); }
+.contenido-tarjeta p { color: var(--texto-secundario); font-size: 0.9rem; line-height: 1.5; }
+
+/* =========================================
+   9. PREGUNTAS FRECUENTES (Acordeón Animado)
+========================================= */
+.seccion-preguntas-frecuentes { 
+    padding: 60px 20px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.elemento-acordeon {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.titulo-acordeon {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: var(--verde-oscuro);
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Flechita animada para el botón */
+.titulo-acordeon::after {
+    content: '▼';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.titulo-acordeon.activa::after {
+    transform: rotate(180deg);
+}
+
+/* Ocultar el contenido por defecto para el efecto JS */
+.respuesta-acordeon { 
+    padding: 0 20px 0px; /* Padding inferior a 0 inicialmente */
+    color: var(--texto-secundario); 
+    font-size: 0.95rem; 
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+/* =========================================
+   10. BOTÓN FLOTANTE WHATSAPP
+========================================= */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background: var(--color-whatsapp); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(13, 234, 94, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-flotante:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(13, 234, 94, 0.5);
+}   :root {
+      --primary-green: #2ecc71;
+      --dark-green: #27ae60;
+      --light-green-bg: #e8f5ee;
+    }
+    
+    button { 
+        background-color: var(--dark-green);
+        border-radius: 20px;
+         display: flex; 
+         align-items: left;
+         padding: 5px;
+         margin-inline: 15px;
+         width: 20%;
+          justify-content: center;
+        align-items: center;
+         text-decoration: none;
+         box-shadow:0 2px;
+
+
+      }
+      .boton-inicio{
+        color:white;
+        text-decoration: none;
+        
+        
+      }

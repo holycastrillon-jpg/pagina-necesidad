@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLORCAS SG-SST</title>
+
+  <link rel="stylesheet" href="css/inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <input type="checkbox" id="theme-switch" class="theme-switch-input" />
+
+  <header class="header">
+    <figure class="logo-container">
+      <div class="site-logo-wrapper">
+        <img src="imagenes/logooficial.jpg" alt="Logo Glorcas SG-SST" class="site-logo" />
+      </div>
+      <figcaption class="logo-text">GLORCAS SG-SST</figcaption>
+    </figure>
+
+    <section class="header-actions">
+      <form class="search-box">
+        <input type="text" placeholder="Buscar servicio..." class="search-input" />
+        <span class="search-icon">🔍</span>
+      </form>
+
+      <label for="theme-switch" class="theme-toggle-mini" title="Alternar tema">
+        <span class="face">
+          <span class="moon"></span>
+        </span>
+      </label>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#inicio" class="active">Inicio</a></li>
+          <li><a href="#fundadora">Sobre Mí</a></li>
+          <li class="dropdown">
+            <a href="#servicios" class="drop-btn">Servicios ▾</a>
+            <div class="dropdown-content">
+              <a href="diseñoSGSST.html">Diseño SG-SST</a>
+              <a href="capacitaciones.html">Capacitaciones</a>
+              <a href="formulario.html">Formulario de ingreso</a>
+            </div>
+          </li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+
+  <main>
+
+    <section class="carousel-section" id="inicio">
+      <input type="radio" name="slider" id="slide-1" checked />
+      <input type="radio" name="slider" id="slide-2" />
+      <input type="radio" name="slider" id="slide-3" />
+      <input type="radio" name="slider" id="slide-4" />
+
+      <div class="carousel-track">
+        <article class="slide slide-1">
+          <figure class="slide-image-container">
+            <img src="imagenes/charla2.jpg" alt="Liderazgo en Seguridad" />
+          </figure>
+          <div class="slide-content">
+            <span class="slide-subtitle">Liderazgo y Experiencia Comprobada</span>
+            <h2>Gloria Maria Castrillon Parra</h2>
+            <h3>Protegemos el motor de tu empresa</h3>
+            <p>13 años de trayectoria implementando sistemas de gestión.</p>
+          </div>
+        </article>
+
+        <article class="slide slide-2">
+          <figure class="slide-image-container">
+            <img src="imagenes/presentacion2.jpg" alt="Gestión de Riesgos" />
+          </figure>
+          <div class="slide-content">
+            <span class="slide-subtitle">Cumplimiento Normativo</span>
+            <h2>Normativa Vigente al Día</h2>
+          </div>
+        </article>
+
+        <article class="slide slide-3">
+          <figure class="slide-image-container">
+            <img src="imagenes/charla.jpg" alt="Capacitaciones en SST" />
+          </figure>
+          <div class="slide-content">
+            <span class="slide-subtitle">Cultura Preventiva</span>
+            <h2>Capacitación y Alturas</h2>
+            <p>Personal certificado en alturas, APH y sistemas integrados.</p>
+          </div>
+        </article>
+
+        <article class="slide slide-4">
+          <figure class="slide-image-container">
+            <img src="imagenes/planta.jpg" alt="Compromiso Empresarial" />
+          </figure>
+          <div class="slide-content">
+            <span class="slide-subtitle">Cultura Preventiva</span>
+            <h2>Compromiso y Seguridad</h2>
+            <p>Planes a la medida de tu sector económico.</p>
+          </div>
+        </article>
+      </div>
+
+      <nav class="carousel-nav">
+        <label for="slide-1" class="dot"></label>
+        <label for="slide-2" class="dot"></label>
+        <label for="slide-3" class="dot"></label>
+        <label for="slide-4" class="dot"></label>
+      </nav>
+    </section>
+
+    <section class="founder-section" id="fundadora">
+      <div class="container">
+        <header class="founder-header">
+          <span class="founder-tag">Directora y Propietaria</span>
+          <h2>Gloria Maria Castrillon Parra</h2>
+        </header>
+
+        <article class="founder-card-flex">
+          <figure class="founder-image-side">
+            <img src="imagenes/perfil.jpg" alt="Foto de perfil Gloria Maria" />
+            <figcaption class="founder-badge"><span>13 años de experiencia</span></figcaption>
+          </figure>
+
+          <div class="founder-info-side">
+            <div class="tabs-container">
+              <input type="radio" name="tab-control" id="tab1" class="tab-radio" checked />
+              <input type="radio" name="tab-control" id="tab2" class="tab-radio" />
+              <input type="radio" name="tab-control" id="tab3" class="tab-radio" />
+
+              <nav class="tab-buttons">
+                <label for="tab1" class="tab-btn">Perfil Profesional</label>
+                <label for="tab2" class="tab-btn">Estudios y Cursos</label>
+                <label for="tab3" class="tab-btn">Habilidades</label>
+              </nav>
+
+              <div class="tab-content content-1">
+                <h3>Liderazgo y Trayectoria</h3>
+                <p>Profesional altamente experimentada en Seguridad y Salud en el Trabajo. Líder proactiva orientada a
+                  la reducción de índices de accidentalidad.</p>
+                <p class="contact-info-mini">📞 3226167819 | ✉️ gloria.parral109@gmail.com</p>
+              </div>
+
+              <div class="tab-content content-2">
+                <h3>Formación Académica</h3>
+                <ul class="styled-list">
+                  <li><strong>Universidad del Tolima:</strong> Profesional en SST (2021)</li>
+                  <li><strong>SENA:</strong> Tecnología en Salud Ocupacional (2013)</li>
+                  <li><strong>Diplomado:</strong> Sistemas de Gestión Integrados (120 hrs)</li>
+                  <li><strong>Cursos:</strong> Coordinador de Alturas, Primer Respondiente (APH)</li>
+                </ul>
+              </div>
+
+              <div class="tab-content content-3">
+                <h3>Competencias Clave</h3>
+                <div class="skills-grid">
+                  <span>Trabajo en equipo</span>
+                  <span>Adaptabilidad</span>
+                  <span>Liderazgo</span>
+                  <span>Resolución de conflictos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="products-carousel-section" id="servicios">
+      <div class="container">
+        <header class="section-header-center">
+          <span class="section-tag">Soluciones Especializadas</span>
+          <h2>Portafolio de Servicios SG-SST</h2>
+        </header>
+
+        <input type="radio" name="prod-slider" id="prod-1" checked />
+        <input type="radio" name="prod-slider" id="prod-2" />
+
+        <div class="products-track">
+          <div class="products-slide">
+
+            <article class="product-card">
+              <div class="product-badge">Esencial</div>
+              <figure class="product-img">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                  alt="Kit Documental SG-SST" />
+              </figure>
+              <div class="product-body">
+                <h3>Kit Documental SG-SST</h3>
+                <p>Matriz legal, políticas y formatos editables.</p>
+                <a href="https://api.whatsapp.com/send?phone=573226167819&text=Hola,%20deseo%20cotizar%20el%20Kit%20Documental%20SG-SST"
+                  class="btn-product" target="_blank">Cotizar al WhatsApp</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-badge">Más Solicitado</div>
+              <figure class="product-img">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80"
+                  alt="Auditoría SG-SST" />
+              </figure>
+              <div class="product-body">
+                <h3>Auditoría y Evaluación</h3>
+                <p>Revisión de estándares mínimos y plan de acción.</p>
+                <a href="https://api.whatsapp.com/send?phone=573226167819&text=Hola,%20deseo%20cotizar%20una%20Auditor%C3%ADa%20y%20Evaluaci%C3%B3n"
+                  class="btn-product" target="_blank">Cotizar al WhatsApp</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <figure class="product-img">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                  alt="Capacitaciones COPASST" />
+              </figure>
+              <div class="product-body">
+                <h3>Capacitaciones COPASST</h3>
+                <p>Módulos de formación para vigías y brigadas.</p>
+                <a href="https://api.whatsapp.com/send?phone=573226167819&text=Hola,%20deseo%20cotizar%20Capacitaciones%20COPASST"
+                  class="btn-product" target="_blank">Cotizar al WhatsApp</a>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="products-slide">
+            
+            <!-- TARJETA AÑADIDA PARA QUE EL SEGUNDO CARRUSEL FUNCIONE -->
+            <article class="product-card">
+              <div class="product-badge">Nuevo</div>
+              <figure class="product-img">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                  alt="Asesoría Personalizada" />
+              </figure>
+              <div class="product-body">
+                <h3>Asesoría Personalizada</h3>
+                <p>Acompañamiento continuo para la mejora del sistema.</p>
+                <a href="https://api.whatsapp.com/send?phone=573226167819&text=Hola,%20deseo%20cotizar%20una%20Asesor%C3%ADa%20Personalizada"
+                  class="btn-product" target="_blank">Cotizar al WhatsApp</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <nav class="products-nav">
+          <label for="prod-1" class="prod-dot"></label>
+          <label for="prod-2" class="prod-dot"></label>
+        </nav>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <header class="section-header-center">
+          <span class="section-tag">Resolviendo Dudas</span>
+          <h2>Preguntas Frecuentes sobre SG-SST</h2>
+        </header>
+
+        <div class="accordion">
+          <details class="accordion-item">
+            <summary class="accordion-header">¿Qué es el SG-SST y por qué es obligatorio?</summary>
+            <div class="accordion-content">
+              <p>El Sistema de Gestión de Seguridad y Salud en el Trabajo es obligatorio para todas las empresas en
+                Colombia según el Decreto 1072 de 2015 para proteger la integridad de los trabajadores.</p>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-header">¿Cada cuánto se debe realizar la auditoría?</summary>
+            <div class="accordion-content">
+              <p>Por norma general, se debe realizar una auditoría anual planificada con participación del COPASST o
+                Vigía de SST.</p>
+            </div>
+          </details>
+          <details class="accordion-item">
+            <summary class="accordion-header">¿Cuáles son las consecuencias de no tener implementado el sistema?
+            </summary>
+            <div class="accordion-content">
+              <p>El Ministerio de Trabajo puede imponer sanciones que van desde multas económicas severas (hasta 500
+                SMMLV) hasta el cierre temporal de la empresa. Si ocurre un accidente grave o mortal y se demuestra
+                negligencia por falta del SG-SST, las responsabilidades escalan a niveles penales y civiles, incluyendo
+                el cierre definitivo de operaciones.</p>
+            </div>
+          </details>
+          <details class="accordion-item">
+            <summary class="accordion-header">¿Cada cuánto tiempo se debe actualizar el sistema?</summary>
+            <div class="accordion-content">
+              <p>La evaluación, revisión por la alta dirección y la actualización del SG-SST deben realizarse
+                obligatoriamente de forma anual. A final de cada año, la empresa debe formular un nuevo Plan de Trabajo
+                y un Plan de Capacitación para la vigencia siguiente.</p>
+            </div>
+          </details>
+          <details class="accordion-item">
+            <summary class="accordion-header">¿Aplica el SG-SST para empresas con menos de 10 trabajadores?</summary>
+            <div class="accordion-content">
+              <p>Sí, aplica para todas las empresas sin importar su tamaño. Sin embargo, los Estándares Mínimos
+                (Resolución 0312 de 2019) permiten que las microempresas (con 10 o menos trabajadores y clasificados en
+                riesgo I, II o III) cumplan con un conjunto simplificado de 7 requisitos, haciendo el proceso más ágil
+                sin perder de vista la prevención básica..</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="https://api.whatsapp.com/send?phone=573226167819&text=Hola%20Gloria,%20me%20gustar%C3%ADa%20solicitar%20una%20asesor%C3%ADa%20en%20SG-SST"
+    class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+    💬 Cotizar por WhatsApp
+  </a>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <section class="footer-info">
+        <h4>GLORCAS SG-SST</h4>
+        <p>Gloria Maria Castrillon Parra</p>
+        <p>Profesional en Seguridad y Salud en el Trabajo.</p>
+        <p>📞 3226167819 | ✉️ gloria.parral109@gmail.com</p>
+      </section>
+
+      <section class="social-icons">
+        <a href="TU_LINK_DE_INSTAGRAM" target="_blank" class="instagram" title="Síguenos en Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="TU_LINK_DE_FACEBOOK" target="_blank" class="facebook" title="Síguenos en Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 GLORCAS SG-SST. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

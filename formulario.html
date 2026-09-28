@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión SG-SST | Solicitud de Servicios y Consultoría</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+
+    <main class="main-wrapper">
+        <div class="form-card">
+            
+            <header class="form-header">
+                 <button>
+                    <a href="index.html" class="boton-inicio">vovler al inicio</a>
+                    </button>   
+                <div class="logo-badge">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <h1>Sistema de Gestión SG-SST</h1>
+                <p>Complete el formulario para iniciar su proceso de consultoría, implementación o auditoría en seguridad laboral.</p>
+            </header>
+
+            <form id="sgsstForm">
+                
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-building-shield"></i> Información de la Empresa
+                    </h2>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="empresa">Razón Social / Empresa <span class="required">*</span></label>
+                            <input type="text" id="empresa" placeholder="Ej. Inversiones y Servicios S.A.S." required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="nit">NIT o Identificación <span class="required">*</span></label>
+                            <input type="text" id="nit" placeholder="Ej. 900.456.789-1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-user-tie"></i> Datos del Responsable
+                    </h2>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                            <input type="text" id="nombre" placeholder="Ej. Marcela Valdés" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="cargo">Cargo o Rol</label>
+                            <input type="text" id="cargo" placeholder="Ej. Directora HSEQ / Gerente">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Correo Electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" placeholder="correo@empresa.com" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="telefono">Teléfono / Celular <span class="required">*</span></label>
+                            <input type="tel" id="telefono" placeholder="Ej. 310 456 7890" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-clipboard-check"></i> Requerimiento Específico
+                    </h2>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="servicio">Servicio Solicitado <span class="required">*</span></label>
+                            <select id="servicio" required>
+                                <option value="" disabled selected>Seleccione una opción...</option>
+                                <option value="Implementación SG-SST">Implementación del Sistema de Gestión</option>
+                                <option value="Auditoría de Estándares Mínimos">Auditoría de Estándares Mínimos (Resolución 0312)</option>
+                                <option value="Capacitación COPASST">Capacitaciones y conformación COPASST / CCL</option>
+                                <option value="Matriz de Peligros (IPEVR)">Matriz de Peligros y Riesgos (IPEVR)</option>
+                                <option value="Asesoría General">Asesoría Integral u Otro Servicio</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="trabajadores">Número de Colaboradores</label>
+                            <select id="trabajadores">
+                                <option value="1 a 10 trabajadores">1 a 10 trabajadores</option>
+                                <option value="11 a 50 trabajadores">11 a 50 trabajadores</option>
+                                <option value="51 a 200 trabajadores">51 a 200 trabajadores</option>
+                                <option value="Más de 200 trabajadores">Más de 200 trabajadores</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label for="detalles">Observaciones o Necesidades Adicionales</label>
+                            <textarea id="detalles" rows="3" placeholder="Describa brevemente el estado actual de su empresa frente al SG-SST..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar Solicitud por WhatsApp
+                    </button>
+                    <p class="privacy-note">
+                        <i class="fa-solid fa-lock"></i> Sus datos son tratados con total confidencialidad bajo la normatividad vigente.
+                    </p>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('sgsstForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const empresa = document.getElementById('empresa').value;
+            const nit = document.getElementById('nit').value;
+            const nombre = document.getElementById('nombre').value;
+            const cargo = document.getElementById('cargo').value || 'No especificado';
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const servicio = document.getElementById('servicio').value;
+            const trabajadores = document.getElementById('trabajadores').value;
+            const detalles = document.getElementById('detalles').value || 'Ninguno';
+
+            let mensaje = `*Nueva Solicitud SG-SST* 🛡️%0A%0A` +
+                          `🏢 *Empresa:* ${empresa} (NIT: ${nit})%0A` +
+                          `👤 *Contacto:* ${nombre} (${cargo})%0A` +
+                          `📧 *Correo:* ${email}%0A` +
+                          `📱 *Teléfono:* ${telefono}%0A` +
+                          `⚙️ *Servicio:* ${servicio}%0A` +
+                          `👥 *Colaboradores:* ${trabajadores}%0A` +
+                          `📝 *Detalles:* ${detalles}`;
+
+            let numeroWhatsApp = "57 322 6167819"; 
+            let urlWp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+            window.open(urlWp, '_blank');
+        });
+    </script>
+</body>
+</html>

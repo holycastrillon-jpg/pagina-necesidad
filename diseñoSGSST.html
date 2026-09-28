@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLORCAS SG-SST | Gestión en Seguridad y Salud</title>
+    <link rel="stylesheet" href="css/diseñoSGSST.css">
+</head>
+<body>
+
+    <input type="checkbox" id="interruptor-tema" class="control-modo-oscuro" checked>
+
+    <div class="fondo-decorativo"></div>
+
+    <header class="cabecera-principal">
+      <button>
+  <a href="index.html" class="boton-inicio">vovler al inicio</a>
+</button>    
+        <div class="contenedor-logo">
+            <span class="texto-logo">GLORCAS SG-SST</span>
+        </div>
+        
+        <label for="interruptor-tema" class="boton-modo-oscuro">
+            <div class="cara-boton">
+                <div class="luna-icono"></div>
+            </div>
+        </label>
+    </header>
+
+    <main>
+        <section class="seccion-servicios" id="servicios">
+            <div class="encabezado-seccion">
+                <h2>Diseño e Implementación SG-SST</h2>
+            </div>
+            
+            <div class="cuadricula-servicios">
+                <article class="tarjeta-cristal">
+                    <div class="contenido-tarjeta">
+                        <h3>Matriz de Identificación de Peligros</h3>
+                        <p>Evaluación detallada de riesgos laborales por cada área de trabajo para establecer controles preventivos y proteger a sus colaboradores.</p>
+                        <a href="#contacto" class="boton-cristal-liquido">Saber Más</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-cristal">
+                    <div class="contenido-tarjeta">
+                        <h3>Plan de Trabajo Anual</h3>
+                        <p>Estructuración cronológica de metas, responsabilidades y recursos necesarios para cumplir con la normativa colombiana de seguridad ocupacional.</p>
+                        <a href="#contacto" class="boton-cristal-liquido">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-cristal">
+                    <div class="contenido-tarjeta">
+                        <h3>Planes de Emergencia</h3>
+                        <p>Elaboración de rutas de evacuación, conformación de brigadas y protocolos de respuesta inmediata ante cualquier eventualidad.</p>
+                        <a href="#contacto" class="boton-cristal-liquido">Solicitar Asesoría</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion-preguntas-frecuentes">
+            <div class="encabezado-seccion">
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            
+            <div class="tarjeta-cristal elemento-acordeon">
+                <button class="titulo-acordeon">¿Qué empresas deben implementar el SG-SST?</button>
+                <div class="respuesta-acordeon">
+                    <p>Toda empresa pública o privada, sin importar su tamaño o nivel de riesgo, está obligada por ley a diseñar e implementar el Sistema de Gestión de Seguridad y Salud en el Trabajo.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-cristal elemento-acordeon">
+                <button class="titulo-acordeon">¿Qué pasa si mi empresa no cuenta con el diseño SG-SST?</button>
+                <div class="respuesta-acordeon">
+                    <p>El incumplimiento de los estándares mínimos puede acarrear multas significativas, cierre temporal de la empresa e implicaciones legales en caso de accidentes laborales.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" style="padding: 60px 20px; text-align: center;">
+            <h2 style="color: var(--verde-oscuro);">Contáctanos</h2>
+            <p style="color: var(--texto-secundario); margin-top: 10px;">Comunícate con nosotros para brindarte asesoría personalizada.</p>
+        </section>
+    </main>
+
+    <a href="https://wa.me/+573226167819?text=Hola,%20me%20gustaría%20recibir%20asesoría%20sobre%20el%20SG-SST%20para%20mi%20empresa." target="_blank" class="whatsapp-flotante">cotiza aqui</a>
+
+    <script>
+        const botonesAcordeon = document.querySelectorAll('.titulo-acordeon');
+
+        botonesAcordeon.forEach(boton => {
+            boton.addEventListener('click', () => {
+                // Alternamos una clase 'activa' para animar si es necesario
+                boton.classList.toggle('activa');
+                
+                // Seleccionamos la respuesta que está justo debajo del botón
+                const respuesta = boton.nextElementSibling;
+                
+                // Si está abierta, la cerramos; si está cerrada, la abrimos
+                if (respuesta.style.maxHeight) {
+                    respuesta.style.maxHeight = null;
+                    respuesta.style.opacity = 0;
+                    respuesta.style.paddingBottom = "0";
+                } else {
+                    // Le damos altura para que se muestre (animación fluida)
+                    respuesta.style.maxHeight = respuesta.scrollHeight + "px";
+                    respuesta.style.opacity = 1;
+                    respuesta.style.paddingBottom = "15px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
