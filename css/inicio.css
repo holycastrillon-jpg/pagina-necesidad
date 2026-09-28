@@ -900,3 +900,154 @@ body {
   color: #aab2bd;
   font-size: 0.75rem;
 }
+
+
+@media screen and (max-width: 992px) {
+  .products-slide {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .founder-card-flex {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 8px 16px var(--shadow-soft);
+    border-top: 1px solid var(--border-color);
+  }
+
+  .menu-toggle:checked ~ .nav-menu,
+  .menu-toggle:checked ~ * .nav-menu {
+    max-height: 600px;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 10px 20px;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background-color: var(--gray-bg);
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .carousel-section {
+    height: 55vh;
+  }
+  
+  .slide-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .slide-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .founder-card-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tab-buttons {
+    justify-content: center;
+  }
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-social .social-links, 
+  .social-icons {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .site-logo-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .search-box {
+    padding: 4px 8px;
+  }
+
+  .search-input {
+    width: 70px;
+  }
+
+  .search-input:focus {
+    width: 100px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .carousel-section {
+    height: 50vh;
+  }
+  
+  .slide-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+
+  .floating-whatsapp {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
